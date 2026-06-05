@@ -4,6 +4,8 @@ Meteor Rush is a 2D top-down arcade shooter built in Unity. The player moves thr
 
 ![Meteor Rush gameplay](images/gamePlay.png)
 
+![Meteor tracking the player](images/MeteorTowardPlayer.png)
+
 ---
 
 ## Features
