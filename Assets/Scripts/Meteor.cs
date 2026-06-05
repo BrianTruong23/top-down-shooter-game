@@ -4,18 +4,35 @@ using UnityEngine.SceneManagement;
 public class Meteor : MonoBehaviour
 {
     float moveSpeed;
+    Transform player; 
+    Vector3 moveDirection; 
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        moveSpeed = Random.Range(1f, 4f);
+        moveSpeed = Random.Range(1f, 2f);
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+
+        if (playerObject != null)
+        {
+            player = playerObject.transform;
+            moveDirection = (player.position - transform.position).normalized;
+
+        }
+        else
+        {
+            moveDirection = Vector3.down; // default to moving down if player not found
+        }
+
     }
 
     // Update is called once per frame
     void Update()
+
     {
-        transform.position += Vector3.down * moveSpeed * Time.deltaTime;
-        
+        transform.position += moveDirection * moveSpeed * Time.deltaTime;
+
         if (transform.position.y < -10f)
         {
             Destroy(gameObject);

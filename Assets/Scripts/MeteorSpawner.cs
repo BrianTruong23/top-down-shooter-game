@@ -3,7 +3,7 @@ using UnityEngine;
 public class MeteorSpawner : MonoBehaviour
 {
     public GameObject meteorPrefab;
-    public float spawnRate = 1f;
+    public float spawnRate = 10f;
     float minX = -9.9f;
     float maxX = 9.8f;
     float nextSpawnTime = 0f; 

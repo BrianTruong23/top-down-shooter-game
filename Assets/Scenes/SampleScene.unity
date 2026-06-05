@@ -803,7 +803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MeteorSpawner
   meteorPrefab: {fileID: 2584875240053742452, guid: cb67668974aec44cbbef0758b476be82, type: 3}
-  spawnRate: 1
+  spawnRate: 5
 --- !u!4 &564511367
 Transform:
   m_ObjectHideFlags: 0
@@ -1482,8 +1482,8 @@ MonoBehaviour:
   - {fileID: 969757048}
   - {fileID: 1477457390}
   audioSource: {fileID: 1762500705}
-  enemyDestroyedClip: {fileID: 8300000, guid: 042873bb4e545471392359f016a92654, type: 3}
-  playerLoseClip: {fileID: 8300000, guid: 58732dbdd805e4554863b957234e1132, type: 3}
+  explosionClip: {fileID: 8300000, guid: 042873bb4e545471392359f016a92654, type: 3}
+  playerHitClip: {fileID: 8300000, guid: 58732dbdd805e4554863b957234e1132, type: 3}
 --- !u!4 &1762500704
 Transform:
   m_ObjectHideFlags: 0
@@ -1511,7 +1511,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

@@ -14,8 +14,8 @@ public class HUDManager : MonoBehaviour
     int score = 0;
     bool gameOver = false;
     public AudioSource audioSource;
-    public AudioClip enemyDestroyedClip;
-    public AudioClip playerLoseClip;
+    public AudioClip explosionClip;
+    public AudioClip playerHitClip;
 
 
     void Start()
@@ -27,12 +27,12 @@ public class HUDManager : MonoBehaviour
 
     public void PlayExplosionSound()
     {
-        audioSource.PlayOneShot(enemyDestroyedClip);
+        audioSource.PlayOneShot(explosionClip);
     }
 
     public void PlayPlayerHit()
     {
-        audioSource.PlayOneShot(playerLoseClip);
+        audioSource.PlayOneShot(playerHitClip);
     }
 
 
